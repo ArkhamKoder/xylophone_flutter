@@ -12,7 +12,16 @@ class XylophoneApp extends StatelessWidget {
     player.play(AssetSource('note$soundNumber.wav'));
   }
 
-  void buildExpand() {}
+  Widget buildExpand() {
+    return Expanded(
+      child: MaterialButton(
+        onPressed: () {
+          playSound(2);
+        },
+        color: Colors.orange,
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,54 +32,13 @@ class XylophoneApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(2);
-                  },
-                  color: Colors.orange,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(3);
-                  },
-                  color: Colors.yellow,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(4);
-                  },
-                  color: Colors.green,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(5);
-                  },
-                  color: Colors.blue,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(6);
-                  },
-                  color: Colors.indigo,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(7);
-                  },
-                  color: Colors.purpleAccent,
-                ),
-              ),
+              buildExpand(),
+              buildExpand(),
+              buildExpand(),
+              buildExpand(),
+              buildExpand(),
+              buildExpand(),
+              buildExpand(),
             ],
           ),
         ),
