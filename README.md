@@ -1,6 +1,6 @@
 # xylophone_flutter
 
-A virtual Xylophone built using flutter!
+A virtual Xylophone built using flutter, using the audioplayers package!
 
 ## Getting Started
 
