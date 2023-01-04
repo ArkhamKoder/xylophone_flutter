@@ -12,7 +12,7 @@ class XylophoneApp extends StatelessWidget {
     player.play(AssetSource('note$soundNumber.wav'));
   }
 
-  Widget buildExpand() {
+  Expanded buildExpand() {
     return Expanded(
       child: MaterialButton(
         onPressed: () {
